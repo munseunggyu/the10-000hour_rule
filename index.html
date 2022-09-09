@@ -174,8 +174,18 @@
     }
     shareBtn.addEventListener('click',clip)
 
+    // 모달 열기 버튼
+    function openModal(){
+      root.appendChild(modalArticle)
 
-      
+    }
+    trainingBtn.addEventListener('click',openModal)
+    // 모달 닫기 버튼
+    function closeModal(){
+      root.removeChild(modalArticle);
+    }
+    modalBtn.addEventListener('click',closeModal)
+    
   </script>
 </body>
 </html>
