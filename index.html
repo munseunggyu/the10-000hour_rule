@@ -93,7 +93,9 @@
     const resultSection = document.createElement('section')
     const result1LineP = document.createElement('p')
     const result2LineP = document.createElement('p')
-    const resultBtnContainer = document.createElement('div')
+
+    // 단지 버튼 스타일때문에 묶어준것 div를 쓰는게 맞는가
+    const resultBtnContainer = document.createElement('div') 
     const trainingBtn = document.createElement('button')
     const shareBtn = document.createElement('button')
     trainingBtn.innerText = '훈련하러 가기 GO!GO!'
@@ -129,11 +131,26 @@
     modalArticle.appendChild(modalP)
     // 훈련하러가기 끝
 
+    // footer 시작
+    const footer = document.createElement('footer')
+    const footerLogo = document.createElement('img')
+    footerLogo.src = './img/logo.png'
+    footerLogo.alt = 'weniv'
+    const small = document.createElement('small')
+    const smallp1 = document.createElement('p')
+    smallp1.innerText = '※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.'
+    const smallp2 = document.createElement('p')
+    smallp2.innerText = '수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.'
+    footer.appendChild(footerLogo)
+    footer.appendChild(small)
+    small.appendChild(smallp1)
+    small.appendChild(smallp2)
+
 
     // root child 시작
     root.appendChild(header)
     root.appendChild(main)
-
+    root.appendChild(footer)
     //root child 끝
     // main child 시작
     main.appendChild(mainh2)
@@ -141,6 +158,7 @@
     main.appendChild(inputSection)
     
     // main child 끝
+
 
 
     // 나는 며칠 동안 훈련을 해야 1만 시간이 될까? 버튼 기능 
