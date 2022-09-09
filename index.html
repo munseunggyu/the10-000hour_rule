@@ -9,7 +9,6 @@
 </head>
 <body>
   <div id="root"></div>
-
   <script>
     const root = document.getElementById('root')
     // header 시작
@@ -25,31 +24,33 @@
     const h1bg = document.createElement('img')
     h1bg.src = './img/clock.png'
     h1bg.alt = ''
-
-
     const headerFigcaption = document.createElement('figcaption')
-
     const subTitleImg = document.createElement('img')
     subTitleImg.src = './img/subtitle.png'
     subTitleImg.alt = '연습은 어제의 당신보다 당신을 더 낫게 만든다'
+
+    header.appendChild(headerFigure)
+    headerFigure.appendChild(h1)
+    h1.appendChild(h1Img)
+    h1.appendChild(h1bg)
+    header.appendChild(headerFigcaption)
+    headerFigcaption.appendChild(subTitleImg)
     
-    // header end
+    // header 끝
     
-    // main start
+    // main 시작
     const main = document.createElement('main')
     const mainh2 = document.createElement('h2')
     mainh2.innerText = '1만시간의 법칙'
     mainh2.classList.add('ir')
 
-    // 1만시간의 법칙 정의 section start
+    // 1만시간의 법칙 정의 section 시작
     const titleDefineSection = document.createElement('section')
     const titleDefineSectionh3 = document.createElement('h3')
     titleDefineSectionh3.innerText = '1만시간의 법칙 정의'
     titleDefineSectionh3.classList.add('ir')
 
     const titleDefinep1Line = document.createElement('p')
-    // const titleDefinep1LineStrong = document.createElement('strong')
-    // titleDefinep1LineStrong.innerText = '1만시간의 법칙'
     titleDefinep1Line.innerHTML = '<strong>1만 시간의 법칙</strong>은'
 
     const titleDefinep2Line = document.createElement('p')
@@ -58,7 +59,12 @@
     const titleDefinep3Line = document.createElement('p')
     titleDefinep3Line.innerText = '최소한 1만 시간의 훈련이 필요하다는 법칙이다.'
 
-    // 1만시간의 법칙 정의 section end
+    titleDefineSection.appendChild(titleDefineSectionh3)
+    titleDefineSection.appendChild(titleDefinep1Line)
+    titleDefineSection.appendChild(titleDefinep2Line)
+    titleDefineSection.appendChild(titleDefinep3Line)
+
+    // 1만시간의 법칙 정의 section 끝
 
     // 1만시간의 법칙 계산해보기 section 시작
     const inputSection = document.createElement('section')
@@ -68,7 +74,7 @@
     const inputSectionForm = document.createElement('form')
     inputSectionForm.method = 'post'
     const inputTextPart = document.createElement('p')
-    inputTextPart.innerHTML = '나는 <input type="text" name="text" placeholder="예) 프로그래밍"> 전문가가 될 것이다.'
+    inputTextPart.innerHTML = '나는 <input type="text" name="text" required placeholder="예) 프로그래밍"> 전문가가 될 것이다.'
     inputTextPart.id = 'inputText'
     const inputTimePart = document.createElement('p')
     inputTimePart.innerHTML = '그래서 앞으로 매일 하루에 <input type="number" name="time" placeholder="예)5시간"> 시간씩 훈련할 것이다.'
@@ -76,57 +82,66 @@
     const formBtn = document.createElement('button')
     formBtn.innerText = '나는 며칠 동안 훈련을 해야 1만 시간이 될까?'
 
+    inputSection.appendChild(inputSectionh3)
+    inputSection.appendChild(inputSectionForm)
+    inputSectionForm.appendChild(inputTextPart)
+    inputSectionForm.appendChild(inputTimePart)
+    inputSectionForm.appendChild(formBtn)
+    // 1만시간의 법칙 계산해보기 section 끝
+
     // 결과 화면 시작
     const resultSection = document.createElement('section')
     const result1LineP = document.createElement('p')
     const result2LineP = document.createElement('p')
-    
     const resultBtnContainer = document.createElement('div')
     const trainingBtn = document.createElement('button')
     const shareBtn = document.createElement('button')
     trainingBtn.innerText = '훈련하러 가기 GO!GO!'
     shareBtn.innerText = '공유하기'
 
-    
-
-    // header child 시작
-    root.appendChild(header)
-    header.appendChild(headerFigure)
-    headerFigure.appendChild(h1)
-    h1.appendChild(h1Img)
-    h1.appendChild(h1bg)
-    header.appendChild(headerFigcaption)
-    headerFigcaption.appendChild(subTitleImg)
-    //header child 끝
-
-    // main child 시작
-    root.appendChild(main)
-    main.appendChild(mainh2)
-    main.appendChild(titleDefineSection)
-    main.appendChild(inputSection)
-    // main child 끝d
-
-    // 1만시간의 법칙 정의 child 시작
-    titleDefineSection.appendChild(titleDefineSectionh3)
-    titleDefineSection.appendChild(titleDefinep1Line)
-    titleDefineSection.appendChild(titleDefinep2Line)
-    titleDefineSection.appendChild(titleDefinep3Line)
-    // 1만시간의 법칙 정의 child 끝
-
-    // 1만시간의 법칙 계산해보기 section child 시작
-    inputSection.appendChild(inputSectionh3)
-    inputSection.appendChild(inputSectionForm)
-    inputSectionForm.appendChild(inputTextPart)
-    inputSectionForm.appendChild(inputTimePart)
-    inputSectionForm.appendChild(formBtn)
-    // 1만시간의 법칙 계산해보기 section child 끝
-
-    // 결과화면 child 시작
     resultSection.appendChild(result1LineP)
     resultSection.appendChild(result2LineP)
     resultSection.appendChild(resultBtnContainer)
     resultBtnContainer.appendChild(trainingBtn)
     resultBtnContainer.appendChild(shareBtn)
+    // 결과 화면 끝
+
+    // 훈련하러가기 시작
+    const modalArticle = document.createElement('article')
+    const modalcheerMessage1 = document.createElement('img')
+    modalcheerMessage1.src = './img/modaltext1.png'
+    modalcheerMessage1.alt = '화이팅!'
+    const modalcheerMessage2 = document.createElement('img')
+    modalcheerMessage2.src = './img/modaltext2.png'
+    modalcheerMessage1.alt = '당신의 꿈을 응원합니다!'
+    const modalLicat = document.createElement('img')
+    modalLicat.src = './img/licat.png'
+    const modalBtn = document.createElement('button')
+    modalBtn.innerText = '종료하고 진짜 훈련하러 하기 GO!GO!'
+    const modalP = document.createElement('p')
+    modalP.innerText = '(그냥 닫기 버튼입니다)'
+
+  
+    modalArticle.appendChild(modalcheerMessage1)
+    modalArticle.appendChild(modalcheerMessage2)
+    modalArticle.appendChild(modalLicat)
+    modalArticle.appendChild(modalBtn)
+    modalArticle.appendChild(modalP)
+    // 훈련하러가기 끝
+
+
+    // root child 시작
+    root.appendChild(header)
+    root.appendChild(main)
+
+    //root child 끝
+    // main child 시작
+    main.appendChild(mainh2)
+    main.appendChild(titleDefineSection)
+    main.appendChild(inputSection)
+    
+    // main child 끝
+
 
     // 나는 며칠 동안 훈련을 해야 1만 시간이 될까? 버튼 기능 
     const inputTextValue = document.querySelector('#inputText input')
@@ -135,10 +150,13 @@
       event.preventDefault()
       const expert = inputTextValue.value
       const time = inputTimeValue.value
-      result1LineP.innerHTML = `당신은 <strong>${expert}</strong> 전문가가 되기 위해서`
+      if(!expert || !time){
+        alert('입력되지 않았습니다.')
+      }else{
+        result1LineP.innerHTML = `당신은 <strong>${expert}</strong> 전문가가 되기 위해서`
       result2LineP.innerHTML = `대략 <strong>${Math.floor(10000/time)}일 이상 훈련하셔야 합니다! :) `
       main.appendChild(resultSection)
-   
+      }
     }
     formBtn.addEventListener('click',onLogSubmit)
 
@@ -156,8 +174,7 @@
     }
     shareBtn.addEventListener('click',clip)
 
-    // 정리를 해봅시다 어캐만들것이냐 
-    // 
+
       
   </script>
 </body>
