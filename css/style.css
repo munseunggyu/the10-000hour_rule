@@ -34,3 +34,16 @@ body{
     background-color:  #5B2386;
     text-align: center;
 }
+
+.ir{
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.test{
+    color:red;
+}
+

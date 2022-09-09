@@ -4,53 +4,105 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>1만시간의 법칙</title>
 </head>
 <body>
   <div id="root"></div>
-  <header>
-    <figure>
-      <h1>
-        <img src="" alt="">
-      </h1>
-      <figcaption>
-
-      </figcaption>
-    </figure>
-  </header>
   <script>
     const root = document.getElementById('root')
     function pageLoad(){
-      // header
+      // header start
 
       const header = document.createElement('header')
-      root.appendChild(header)
-
+      
       const headerFigure = document.createElement('figure')
-      header.appendChild(headerFigure)
 
       const h1 = document.createElement('h1')
-      headerFigure.appendChild(h1)
 
       const h1Img = document.createElement('img')
       h1Img.src = './img/title.png'
       h1Img.alt = '1만시간의 법칙'
-      h1.appendChild(h1Img)
+      const h1bg = document.createElement('img')
+      h1bg.src = './img/clock.png'
+      h1bg.alt = ''
+
 
       const headerFigcaption = document.createElement('figcaption')
-      header.appendChild(headerFigcaption)
 
       const subTitleImg = document.createElement('img')
       subTitleImg.src = './img/subtitle.png'
       subTitleImg.alt = '연습은 어제의 당신보다 당신을 더 낫게 만든다'
+      
+      // header end
+      
+      // main start
+      const main = document.createElement('main')
+      const mainh2 = document.createElement('h2')
+      mainh2.innerText = '1만시간의 법칙'
+      mainh2.classList.add('ir')
+
+      // 1만시간의 법칙 정의 section start
+      const titleDefineSection = document.createElement('section')
+      const titleDefineSectionh3 = document.createElement('h3')
+      titleDefineSectionh3.innerText = '1만시간의 법칙 정의'
+      titleDefineSectionh3.classList.add('ir')
+
+      const titleDefinep1Line = document.createElement('p')
+      // const titleDefinep1LineStrong = document.createElement('strong')
+      // titleDefinep1LineStrong.innerText = '1만시간의 법칙'
+      titleDefinep1Line.innerHTML = '<strong>1만 시간의 법칙</strong>은'
+
+      const titleDefinep2Line = document.createElement('p')
+      titleDefinep2Line.innerText = '어떤 분야의 전문가가 되기 위해서는'
+
+      const titleDefinep3Line = document.createElement('p')
+      titleDefinep3Line.innerText = '최소한 1만 시간의 훈련이 필요하다는 법칙이다.'
+
+      // 1만시간의 법칙 정의 section end
+
+      // 1만시간의 법칙 계산해보기 section start
+      const inputSection = document.createElement('section')
+      const inputSectionh3 = document.createElement('h3')
+      inputSectionh3.innerText = '1만시간의 법칙 계산해보기 입력창'
+      inputSectionh3.classList.add('ir')
+      const inputSectionForm = document.createElement('form')
+      const inputTextPart = document.createElement('p')
+      inputTextPart.innerHTML = '나는 <input type="text" name="text" placeholder="예) 프로그래밍"> 전문가가 될 것이다.'
+      const inputTimePart = document.createElement('p')
+      inputTimePart.innerHTML = '그래서 앞으로 매일 하루에 <input type="number" name="time" placeholder="예)5시간"> 시간씩 훈련할 것이다.'
+      const formBtn = document.createElement('button')
+      formBtn.innerText = '나는 며칠 동안 훈련을 해야 1만 시간이 될까?'
+      // header child start
+      root.appendChild(header)
+      header.appendChild(headerFigure)
+      headerFigure.appendChild(h1)
+      h1.appendChild(h1Img)
+      h1.appendChild(h1bg)
+      header.appendChild(headerFigcaption)
       headerFigcaption.appendChild(subTitleImg)
-      
-      // header 끝
-      
+      //header child end
 
+      // main child start
+      root.appendChild(main)
+      main.appendChild(mainh2)
+      main.appendChild(titleDefineSection)
+      main.appendChild(inputSection)
+      // main child end
 
+      // 1만시간의 법칙 정의 시작
+      titleDefineSection.appendChild(titleDefineSectionh3)
+      titleDefineSection.appendChild(titleDefinep1Line)
+      titleDefineSection.appendChild(titleDefinep2Line)
+      titleDefineSection.appendChild(titleDefinep3Line)
+      // 1만시간의 법칙 정의 끝
 
-
+      // 1만시간의 법칙 계산해보기 section start
+      inputSection.appendChild(inputSectionh3)
+      inputSection.appendChild(inputSectionForm)
+      inputSectionForm.appendChild(inputTextPart)
+      inputSectionForm.appendChild(inputTimePart)
+      inputSectionForm.appendChild(formBtn)
     }
     pageLoad()
     
