@@ -21,10 +21,13 @@
     const h1Img = document.createElement('img')
     h1Img.src = './img/title.png'
     h1Img.alt = '1만시간의 법칙'
+    h1Img.classList.add('tit-img')
     const h1bg = document.createElement('img')
     h1bg.src = './img/clock.png'
     h1bg.alt = ''
+    h1bg.classList.add('clock-img')
     const headerFigcaption = document.createElement('figcaption')
+    headerFigcaption.classList.add('subtit-img')
     const subTitleImg = document.createElement('img')
     subTitleImg.src = './img/subtitle.png'
     subTitleImg.alt = '연습은 어제의 당신보다 당신을 더 낫게 만든다'
@@ -110,6 +113,9 @@
 
     // 훈련하러가기 시작
     const modalArticle = document.createElement('article')
+    const modalh2 = document.createElement('h2')
+    modalh2.innerText = '응원메시지'
+    modalh2.classList.add('ir')
     const modalcheerMessage1 = document.createElement('img')
     modalcheerMessage1.src = './img/modaltext1.png'
     modalcheerMessage1.alt = '화이팅!'
@@ -123,7 +129,7 @@
     const modalP = document.createElement('p')
     modalP.innerText = '(그냥 닫기 버튼입니다)'
 
-  
+    modalArticle.appendChild(modalh2)
     modalArticle.appendChild(modalcheerMessage1)
     modalArticle.appendChild(modalcheerMessage2)
     modalArticle.appendChild(modalLicat)
@@ -146,7 +152,6 @@
     small.appendChild(smallp1)
     small.appendChild(smallp2)
 
-
     // root child 시작
     root.appendChild(header)
     root.appendChild(main)
@@ -164,7 +169,7 @@
     // 나는 며칠 동안 훈련을 해야 1만 시간이 될까? 버튼 기능 
     const inputTextValue = document.querySelector('#inputText input')
     const inputTimeValue = document.querySelector('#inputTime input')
-    const onLogSubmit = (event) => {
+    const onSubmit = (event) => {
       event.preventDefault()
       const expert = inputTextValue.value
       const time = inputTimeValue.value
@@ -176,7 +181,7 @@
       main.appendChild(resultSection)
       }
     }
-    formBtn.addEventListener('click',onLogSubmit)
+    formBtn.addEventListener('click',onSubmit)
 
     // 공유하기 버튼 기능 url 복사
     function clip(){

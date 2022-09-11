@@ -31,8 +31,6 @@
 }
 
 body{
-    background-color:  #5B2386;
-    text-align: center;
 }
 
 .ir{
@@ -43,7 +41,45 @@ body{
     overflow: hidden;
 }
 
+#root{
+    background-color:  #5B2386;
+    text-align: center;
+    
+}
+
 .test{
     color:red;
 }
+header{
+    padding-top: 100px;
 
+}
+h1{
+    position: relative;
+    width: 530px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 .tit-img{
+    width: 564px;
+    height: 112px;
+    z-index: 2;
+}
+
+h1 .clock-img{
+    position: absolute;
+    width: 265px;
+    height: 265px;
+    z-index: 1;
+}
+
+.subtit-img{
+    padding-top: 100px;
+    width: 486px;
+    height: 40px;
+    margin: 0 auto;
+}
