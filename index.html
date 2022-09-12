@@ -101,11 +101,13 @@
 
     // 결과 화면 시작
     const resultSection = document.createElement('section')
+    resultSection.classList.add('result-section')
     const result1LineP = document.createElement('p')
     const result2LineP = document.createElement('p')
 
     // 단지 버튼 스타일때문에 묶어준것 div를 쓰는게 맞는가
     const resultBtnContainer = document.createElement('div') 
+    resultBtnContainer.classList.add('result-btn-container')
     const trainingBtn = document.createElement('button')
     const shareBtn = document.createElement('button')
     trainingBtn.innerText = '훈련하러 가기 GO!GO!'
@@ -183,8 +185,8 @@
       if(!expert || !time){
         alert('입력되지 않았습니다.')
       }else{
-        result1LineP.innerHTML = `당신은 <strong>${expert}</strong> 전문가가 되기 위해서`
-      result2LineP.innerHTML = `대략 <strong>${Math.floor(10000/time)}일 이상 훈련하셔야 합니다! :) `
+        result1LineP.innerHTML = `당신은  <strong>${expert}</strong> 전문가가 되기 위해서`
+      result2LineP.innerHTML = `대략 <strong>${Math.floor(10000/time)}</strong> 일 이상 훈련하셔야 합니다! :) `
       main.appendChild(resultSection)
       }
     }
