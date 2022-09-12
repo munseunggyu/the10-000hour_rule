@@ -177,3 +177,15 @@ button{
     margin-left: 18px;
     background-color: white;
 }
+footer {
+    padding-bottom: 70px;
+}
+.footer-logo{
+    padding-bottom: 20px;
+}
+small{
+    padding-top: 20px;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+}
