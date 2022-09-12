@@ -49,47 +49,54 @@
 
     // 1만시간의 법칙 정의 section 시작
     const titleDefineSection = document.createElement('section')
+    titleDefineSection.classList.add('tit-def')
     const titleDefineSectionh3 = document.createElement('h3')
     titleDefineSectionh3.innerText = '1만시간의 법칙 정의'
     titleDefineSectionh3.classList.add('ir')
 
-    const titleDefinep1Line = document.createElement('p')
-    titleDefinep1Line.innerHTML = '<strong>1만 시간의 법칙</strong>은'
+    const titleDefinetxt = document.createElement('p')
+    titleDefinetxt.innerHTML = '<strong>1만 시간의 법칙</strong>은 <br> 어떤 분야의 전문가가 되기 위해서는<br> 최소한 1만 시간의 훈련이 필요하다는 법칙이다.'
+    titleDefinetxt.classList.add('tit-def-txt')
 
-    const titleDefinep2Line = document.createElement('p')
-    titleDefinep2Line.innerText = '어떤 분야의 전문가가 되기 위해서는'
-
-    const titleDefinep3Line = document.createElement('p')
-    titleDefinep3Line.innerText = '최소한 1만 시간의 훈련이 필요하다는 법칙이다.'
 
     titleDefineSection.appendChild(titleDefineSectionh3)
-    titleDefineSection.appendChild(titleDefinep1Line)
-    titleDefineSection.appendChild(titleDefinep2Line)
-    titleDefineSection.appendChild(titleDefinep3Line)
+    titleDefineSection.appendChild(titleDefinetxt)
+
 
     // 1만시간의 법칙 정의 section 끝
 
     // 1만시간의 법칙 계산해보기 section 시작
     const inputSection = document.createElement('section')
+    inputSection.classList.add('input-section')
     const inputSectionh3 = document.createElement('h3')
     inputSectionh3.innerText = '1만시간의 법칙 계산해보기 입력창'
     inputSectionh3.classList.add('ir')
     const inputSectionForm = document.createElement('form')
     inputSectionForm.method = 'post'
     const inputTextPart = document.createElement('p')
+    inputTextPart.classList.add('input-txt')
     inputTextPart.innerHTML = '나는 <input type="text" name="text" required placeholder="예) 프로그래밍"> 전문가가 될 것이다.'
     inputTextPart.id = 'inputText'
     const inputTimePart = document.createElement('p')
     inputTimePart.innerHTML = '그래서 앞으로 매일 하루에 <input type="number" name="time" placeholder="예)5시간"> 시간씩 훈련할 것이다.'
     inputTimePart.id = 'inputTime'
+    const formBtnContainer = document.createElement('div')
+    formBtnContainer.classList.add('form-btn-container')
     const formBtn = document.createElement('button')
     formBtn.innerText = '나는 며칠 동안 훈련을 해야 1만 시간이 될까?'
+    formBtn.classList.add('form-btn')
+    const clickImg = document.createElement('img')
+    clickImg.src = './img/click.png'
+    clickImg.alt = ''
+    clickImg.classList.add('click-img')
 
     inputSection.appendChild(inputSectionh3)
     inputSection.appendChild(inputSectionForm)
     inputSectionForm.appendChild(inputTextPart)
     inputSectionForm.appendChild(inputTimePart)
-    inputSectionForm.appendChild(formBtn)
+    inputSectionForm.appendChild(formBtnContainer)
+    formBtnContainer.appendChild(formBtn)
+    formBtnContainer.appendChild(clickImg)
     // 1만시간의 법칙 계산해보기 section 끝
 
     // 결과 화면 시작
