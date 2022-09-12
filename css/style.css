@@ -35,7 +35,7 @@ body{
 
  /* common 시작 */
 button{
-    padding: 10px 35px;
+    padding: 13px 35px;
     border: 0;
     border-radius: 56px;
     background-color: #FCEE21;
@@ -113,13 +113,14 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 30px;
     margin-bottom: 100px;
 }
 
 .tit-def-txt strong{
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    font-family: 'GmarketSansBold';
+    font-weight: 800;
 }
 
 .input-section{
@@ -131,11 +132,16 @@ main{
     height: 57px;
     border-radius: 10px;
     padding: 17px 20px;
-    font-size: 24px;
+    font-size: 22px;
     box-sizing: border-box;
     text-align: left;
-    margin-bottom: 22px;
     margin: 0 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    font-weight: 500;
+}
+.input-section p input::placeholder{
+    color:rgba(0, 0, 0, 0.3);
 }
 
 .form-btn-container{
@@ -164,7 +170,7 @@ main{
 }
 
 .result-section p:first-child{
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 .result-section p:nth-child(2){
     margin-bottom: 100px;
@@ -172,7 +178,8 @@ main{
 .result-section p strong{
     font-size: 72px;
     line-height: 24px;
-    font-weight: bold;
+    font-family: 'GmarketSansBold';
+    font-weight: 800;
     padding: 0 24px;
 }
 
