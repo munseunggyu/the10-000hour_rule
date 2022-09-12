@@ -46,6 +46,7 @@ body{
     background-color:  #5B2386;
     text-align: center;
     color: white;
+    position: relative;
 }
 
 .test{
@@ -177,6 +178,42 @@ button{
     margin-left: 18px;
     background-color: white;
 }
+
+.modal-container{
+    background-color: white;
+    width: 610px;
+    height: 600px;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    padding: 70px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-img-1{
+    width: 320px;
+    margin-bottom: 13px;
+}
+.modal-img-2{
+    width: 192px;
+}
+.modal-container button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.3);
+    
+}
+.modal-container p{
+    color: #747474;
+}
+
 footer {
     padding-bottom: 70px;
 }

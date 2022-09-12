@@ -122,19 +122,24 @@
 
     // 훈련하러가기 시작
     const modalArticle = document.createElement('article')
+    modalArticle.classList.add('modal-container')
     const modalh2 = document.createElement('h2')
     modalh2.innerText = '응원메시지'
     modalh2.classList.add('ir')
     const modalcheerMessage1 = document.createElement('img')
     modalcheerMessage1.src = './img/modaltext1.png'
     modalcheerMessage1.alt = '화이팅!'
+    modalcheerMessage1.classList.add('modal-img-1')
     const modalcheerMessage2 = document.createElement('img')
     modalcheerMessage2.src = './img/modaltext2.png'
     modalcheerMessage1.alt = '당신의 꿈을 응원합니다!'
+    modalcheerMessage2.classList.add('modal-img-2')
+
     const modalLicat = document.createElement('img')
     modalLicat.src = './img/licat.png'
     const modalBtn = document.createElement('button')
     modalBtn.innerText = '종료하고 진짜 훈련하러 하기 GO!GO!'
+
     const modalP = document.createElement('p')
     modalP.innerText = '(그냥 닫기 버튼입니다)'
 
