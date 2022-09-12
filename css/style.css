@@ -33,6 +33,18 @@
 body{
 }
 
+ /* common 시작 */
+button{
+    padding: 10px 35px;
+    border: 0;
+    border-radius: 56px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    font-size: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'GmarketSansBold';
+}
 
 .ir{
     clip: rect(0 0 0 0);
@@ -42,16 +54,19 @@ body{
     overflow: hidden;
 }
 
+/* common 끝 */
+
+
+
 #root{
     background-color:  #5B2386;
     text-align: center;
     color: white;
     position: relative;
+    font-family: 'GmarketSansMedium';
 }
 
-.test{
-    color:red;
-}
+ /* header 시작 */
 header{
     padding-top: 130px;
 
@@ -85,16 +100,19 @@ h1 .clock-img{
     height: 40px;
     margin: 0 auto;
 }
+ /* header 끝 */
 
+ /* main 시작 */
 main{
     padding-top: 58px;
 }
 
+/* 1만시간의 법칙 정의 section 시작 */
 .tit-def{
     background-image: url('../img/quotes.png');
     background-position: center;
     background-repeat: no-repeat;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     margin-bottom: 100px;
 }
@@ -105,7 +123,7 @@ main{
 }
 
 .input-section{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .input-section p input{
@@ -129,32 +147,20 @@ main{
     padding-bottom: 80px;
 }
 
-button{
-    padding: 10px 35px;
-    border: 0;
-    border-radius: 56px;
-    background-color: #FCEE21;
-    color: #5B2386;
-    font-size: 22px;
-    box-sizing: border-box;
-    font-weight: 800;
-    cursor: pointer;
-
-}
-
 .click-img{
     position: absolute;
     right: -70px;
 }
+/* 1만시간의 법칙 정의 section 끝 */
 
+/* 결과 화면 시작 */
 .result-section{
-    /* padding-bottom: 100px; */
 }
 .result-section p{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .result-section p:first-child{
@@ -175,10 +181,12 @@ button{
 }
 
 .result-btn-container button:nth-child(2){
-    margin-left: 18px;
+    margin-left: 16px;
     background-color: white;
 }
+/* 결과 화면 끝 */
 
+/* 모달 시작 */
 .modal-container{
     background-color: white;
     width: 610px;
@@ -210,12 +218,16 @@ button{
     box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.3);
     
 }
+
 .modal-container p{
     color: #747474;
 }
+/* 모달 끝 */
 
+/* footer 시작 */
 footer {
     padding-bottom: 70px;
+    font-family: 'Noto Sans KR';
 }
 .footer-logo{
     padding-bottom: 20px;
@@ -226,3 +238,4 @@ small{
     line-height: 15px;
     font-weight: 400;
 }
+/* footer 끝 */
