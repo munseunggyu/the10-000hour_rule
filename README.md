@@ -1,6 +1,6 @@
 # 1. 목표와 기능
 
-## 1.1목표
+## 1.1목표 
 - vanilla JS 이용한 SPA 구현
 - 1만시간의 법칙에 대한 정의
 
@@ -12,8 +12,8 @@
 ## 2.1 개발 환경
 - Vanilla JS
 
-## 2.2 배보 URL
-- github pages
+## 2.2 배포 URL
+- [github pages](https://munseunggyu.github.io/the10000hour_rule/)
 
 # 3. 디자인
 
@@ -21,4 +21,4 @@
 
 # 4. 개발하면서 느낀점
 
-- 너무 리액트로만 개발을 하다 보니 Vanilla JS를 너무 못 해진 것 같다 Vanilla JS로 SPA를 많이 만들어 봐야 될 것 같다.
+- 너무 리액트로만 개발을 하다 보니 Vanilla JS를 너무 못 해진 것 같다 Vanilla JS로 SPA를 만드는 것을 연습해야 될 것 같다.
