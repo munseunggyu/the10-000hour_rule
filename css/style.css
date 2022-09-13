@@ -64,6 +64,7 @@ button{
     color: white;
     position: relative;
     font-family: 'GmarketSansMedium';
+    width: 100%;
 }
 
  /* header 시작 */
