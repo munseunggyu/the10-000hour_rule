@@ -30,8 +30,7 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
-body{
-}
+
 
  /* common 시작 */
 button{
@@ -135,7 +134,7 @@ main{
     padding: 17px 20px;
     font-size: 22px;
     box-sizing: border-box;
-    text-align: left;
+    text-align: center;
     margin: 0 10px;
     margin-bottom: 20px;
     border: 1px solid black;
@@ -146,12 +145,11 @@ main{
 }
 
 .form-btn-container{
-    padding-top: 80px;
+    padding: 80px 0; 
     position: relative;
     width: 492px;
     height: 50px;
     margin: 0 auto;
-    padding-bottom: 80px;
 }
 
 .click-img{
@@ -161,8 +159,7 @@ main{
 /* 1만시간의 법칙 정의 section 끝 */
 
 /* 결과 화면 시작 */
-.result-section{
-}
+
 .result-section p{
     display: flex;
     justify-content: center;
@@ -178,7 +175,6 @@ main{
 }
 .result-section p strong{
     font-size: 72px;
-    line-height: 24px;
     font-family: 'GmarketSansBold';
     font-weight: 800;
     padding: 0 24px;
